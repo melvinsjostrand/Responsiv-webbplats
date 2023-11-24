@@ -1,0 +1,72 @@
+body{
+    margin: 0;
+}
+.wrapper
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 100px auto 50px;
+}
+header
+{
+
+    background-color: lightgray;
+    h1
+    {
+        align-self: center;
+        text-align: center;
+        font-size: 1.5em;
+    }
+}
+nav
+{
+    ul
+    {
+        padding: 0;
+        list-style-type: none;
+        align-items: center;
+        li
+        {
+            text-align: center;
+            a
+            {
+                text-align: center;
+                text-decoration: none;
+                color: black;
+                font-size: 1.3em;
+            }
+        }
+    }
+}
+#index main {
+    display: grid;
+    grid-template-rows: auto auto;
+    nav
+    {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+    img{
+        width: 50%;
+        place-self: center;
+    }
+  }
+#sida2{
+    main
+    {
+
+    }
+}
+#sida3 main
+{
+
+}
+
+footer
+{
+font-size: 1.5em;
+text-align: center;
+}
+@media screen and (max-width: 1026){
+    
+}
