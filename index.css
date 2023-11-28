@@ -1,35 +1,48 @@
 body {
   margin: 0;
+  height: 97vh;
 }
 
 .wrapper {
+  height: 100%;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 100px 100px auto 50px;
+  grid-template-areas: "head" "nav" "main" "foot";
 }
 
 header {
+  grid-area: head;
   background-color: lightgray;
+  height: 100%;
 }
 header h1 {
-  align-self: center;
   text-align: center;
   font-size: 1.5em;
 }
 
+nav {
+  grid-area: nav;
+}
 nav ul {
   padding: 0;
   list-style-type: none;
   align-items: center;
 }
 nav ul li {
+  margin: 5px 0px 0px 5px;
   text-align: center;
 }
 nav ul li a {
+  border: solid black 1px;
   text-align: center;
   text-decoration: none;
   color: black;
   font-size: 1.3em;
+}
+
+main {
+  grid-area: main;
 }
 
 #index main {
@@ -49,9 +62,22 @@ nav ul li a {
   margin-left: 10px;
 }
 
+#sida3 .wrapper {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 100px auto auto 50px;
+  grid-template-areas: "head" "nav" "main" "aside" "foot";
+}
+#sida3 .wrapper aside {
+  grid-area: aside;
+}
+
 footer {
+  grid-area: foot;
   font-size: 1.5em;
   text-align: center;
+  background-color: lightgray;
 }
 
 @media screen and (min-width: 1024px) {
@@ -62,7 +88,7 @@ footer {
   #index main {
     display: grid;
     grid-template-rows: auto;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
   }
   #index main p {
     display: flex;
@@ -71,15 +97,12 @@ footer {
   }
   #index main img {
     width: 60%;
-    height: 80%;
   }
   #sida2 .wrapper {
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 2fr 8fr;
     grid-template-rows: 100px auto 50px;
-  }
-  #sida2 header {
-    grid-column: 1/3;
+    grid-template-areas: "head head" "nav main" "foot foot";
   }
   #sida2 nav {
     height: auto;
@@ -102,15 +125,14 @@ footer {
     margin-left: 50px;
   }
   #sida2 footer {
-    grid-column: 1/3;
+    margin-top: auto;
+    background-color: lightgray;
   }
   #sida3 .wrapper {
     display: grid;
-    grid-template-columns: 30% 50% 20%;
+    grid-template-columns: 2fr 5fr 3fr;
     grid-template-rows: 100px auto 50px;
-  }
-  #sida3 header {
-    grid-column: 1/4;
+    grid-template-areas: "head head head" "nav main aside" "foot foot foot";
   }
   #sida3 nav {
     height: auto;
@@ -124,12 +146,9 @@ footer {
   }
   #sida3 main {
     display: grid;
-    grid-template-columns: auto auto;
+    padding: 0 20px 0 20px;
   }
-  #sida3 main p {
-    padding: 30px 0 0 30px;
-  }
-  #sida3 footer {
-    grid-column: 1/4;
+  #sida3 aside {
+    padding: 0 20px 0 20px;
   }
 }/*# sourceMappingURL=index.css.map */
